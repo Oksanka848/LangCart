@@ -1,11 +1,20 @@
 
 import './App.css';
-
+import Main from './components/Main/Main';
 export default function App() {
   return (
-    <div className="App">
+    <>
+    <header>
+      
+    </header>
+    <main>
+      <Main/>
      
-    </div>
+    </main>
+    <footer>
+     
+    </footer>
+  </>
   );
 }
 

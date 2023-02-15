@@ -1,0 +1,249 @@
+/* main container*/
+
+.maincontainer {
+  overflow-y: scroll;
+}
+
+.main {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+}
+
+.dgrid {
+  display: grid;
+}
+.card2 {
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+
+.top-bar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.open-menu-icon {
+  font-size: var(--font-size-lg);
+}
+
+.task-container,
+.task-container-2 {
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+}
+
+.exam {
+  background-color: var(--dark-purple-color);
+}
+
+.exam p {
+  color: var(--normal-purple-color);
+}
+
+.deadline {
+  text-transform: uppercase;
+}
+
+.exam-title {
+  color: #fff;
+}
+
+.start-testing-container {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.start-testing-container a {
+  color: #fff;
+}
+
+.check-mark {
+  font-size: var(--font-size-lg);
+  display: inline-block;
+  margin-bottom: var(--margin-sm);
+}
+
+.homework {
+  background-color: var(--light-orange-color);
+}
+
+.homework .check-mark {
+  color: var(--dark-orange-color);
+}
+
+.homework h4 {
+  color: var(--dark-orange-color);
+}
+
+.homework p {
+  color: var(--normal-orange-color);
+}
+
+.reading {
+  background-color: var(--light-purple-color);
+}
+
+.reading .check-mark {
+  color: var(--dark-purple-color);
+}
+
+.reading h4 {
+  color: var(--dark-purple-color);
+}
+
+.reading p {
+  color: var(--normal-purple-color);
+}
+
+.group-task-container {
+  grid-template-columns: 2fr 3fr;
+  gap: var(--gap);
+}
+
+.bell-icon {
+  color: var(--dark-orange-color);
+  background-color: var(--light-orange-color);
+  padding: var(--padding-xsm);
+  border-radius: 1rem;
+  display: inline-block;
+  margin-bottom: var(--margin-sm);
+}
+
+.progress-cover {
+  position: relative;
+  height: 1rem;
+  width: 80%;
+  background-color: #f4f5f7;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 75%;
+  background-color: var(--normal-orange-color);
+}
+
+.group-info {
+  box-shadow: 0 2px 38px 0 rgba(0, 0, 0, 0.1);
+}
+
+.group-homework {
+  background-color: var(--normal-orange-color);
+  align-items: center;
+  justify-content: space-between;
+  margin-block: var(--margin-sm);
+  color: #fff;
+}
+
+.group-homework-title {
+  color: #fff;
+}
+
+.today-lesson {
+  justify-content: space-between;
+}
+
+.grammer-course {
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+}
+
+.course {
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.grammer,
+.dictionary {
+  align-items: center;
+  gap: var(--gap);
+}
+
+.grammer-icon {
+  color: var(--dark-purple-color);
+  background-color: var(--light-purple-color);
+  padding: var(--padding-xsm);
+  border-radius: 1rem;
+}
+
+.dictionary-icon {
+  color: var(--dark-orange-color);
+  background-color: var(--light-orange-color);
+  padding: var(--padding-xsm);
+  border-radius: 1rem;
+}
+
+
+/* secondary container*/
+
+.secondary-container {
+  background-color: var(--tertiary-background-color);
+  overflow-y: scroll;
+}
+
+
+@media screen and (max-width: 1160px) {
+  .container {
+    display: block;
+    overflow: auto;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+  .task-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  section {
+    padding: var(--padding-md);
+  }
+  .group-task-container {
+    grid-template-columns: 1fr;
+  }
+  .grammer-course {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .sidebar {
+    padding: 0 1rem;
+  }
+  .logo {
+    top: 2rem;
+  }
+  h1 {
+    font-size: var(--font-size-lg);
+  }
+  section {
+    padding: var(--padding-sm);
+  }
+  .task-container-2 {
+    grid-template-columns: 1fr;
+  }
+  .card-2 {
+    padding: var(--padding-sm);
+  }
+  .check-mark {
+    margin-bottom: var(--margin-xsm);
+  }
+}

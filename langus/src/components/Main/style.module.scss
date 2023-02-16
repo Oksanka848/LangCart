@@ -1,23 +1,18 @@
 /* main container*/
-
-.maincontainer {
-  overflow-y: scroll;
-}
-
+@import "../style.scss";
 .main {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100vw;
-}
-
-.grid {
+  margin: 10px;
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    'card card'
+    'card card';
+  grid-gap: 10px;
 }
-.card-2 {
-  padding: 2rem;
-  border-radius: 1rem;
-  transition: 0.3s;
+section {
+  padding: 20px;
+  border: 1px solid $normal-purple-color;
+  border-radius: 4px;
+  color: $dark-purple-color;
 }

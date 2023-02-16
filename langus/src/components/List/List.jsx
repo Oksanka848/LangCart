@@ -34,7 +34,7 @@ export default function WordList() {
                     <div></div>
                     <div></div>
                     <div className={style.buttons}>
-                        <div className={style.btn}></div>
+                        <Button className={style.btn}></Button>
                         <Button  onClick={handleEditMode}>Добавить</Button>
                     </div>
                 </>

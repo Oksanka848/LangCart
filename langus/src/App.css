@@ -1,5 +1,3 @@
-@import "../style.scss";
-
   .App {
     display: grid; /* applies grid layout affecting it's children */
     grid-template-columns: 240px 1fr; /* define the number and sizes of columns */

@@ -7,12 +7,10 @@ import style from './style.module.scss';
 export default function Main() {
   return (
     <>
-    <div className={`${style.main} ${style.grid}`}>
+    <div className={style.main}>
     
-    <section className={`${style.maincontainer}`}>
-    <List/></section>
-    <section className={`${style.maincontainer}`}>
-    <WordList/></section>
+    <section ><List/></section>
+    <section ><WordList/></section>
    
     </div>
           </>

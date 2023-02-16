@@ -1,18 +1,13 @@
 import React from 'react';
-import Contacts from '../Contacts/Contacts';
 
+import style from './style.module.scss';
 
 
 export default function Header() {
   return (
     <>
-    <div className='header'>
-    <nav>
-      <a href='/#'>Main</a>
-      <a href='/#'>Words</a>
-      <a href='/#'>Train</a>
-      </nav>
-      <Contacts />
+    <div className={style.hero_wrapp}>
+    <div className={style._section}></div>
       </div>
     </>
   )

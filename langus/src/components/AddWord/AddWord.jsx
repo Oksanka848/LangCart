@@ -4,7 +4,7 @@ import style from './style.module.scss';
 
 /*import Button from '../Button/Button';*/
 
-export default function AddWord(props) {
+export default function AddWord() {
    
       const [isEditMode, setIsEditMode] = useState(false);
 

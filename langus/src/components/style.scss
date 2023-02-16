@@ -29,6 +29,11 @@ $padding-md: 3rem;
 $padding-sm: 2rem;
 $padding-xsm: 1rem;
 
+body {
+  font-family: $font-family;
+  font-size: $font-size-sm;
+  letter-spacing: 1px;
+}
 
 h1 {
   font-size: $font-size-xl;

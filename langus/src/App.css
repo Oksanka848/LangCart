@@ -1,7 +1,7 @@
 .App {
   display: grid; /* applies grid layout affecting it's children */
   grid-template-columns: 240px 1fr; /* define the number and sizes of columns */
-  grid-template-rows: 50px 1fr 10px; /* defines the number ans sizes of rows*/
+  grid-template-rows: 10% 1fr 5%; /* defines the number ans sizes of rows*/
   grid-template-areas:
     'header header'
     'main main'

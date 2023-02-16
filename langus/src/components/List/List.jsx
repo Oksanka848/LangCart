@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import style from './list.module.scss';
 import Button from '../Button/Button';
 
-export default function WordList(props) {
+export default function WordList() {
   const [isEditMode, setIsEditMode] = useState(false);
 
   const handleEditMode = () => {

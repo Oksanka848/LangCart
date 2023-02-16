@@ -4,6 +4,7 @@ import Main from './components/Main/Main';
 export default function App() {
   return (
     <>
+    <div className='App'>
     <header>
       
     </header>
@@ -14,6 +15,7 @@ export default function App() {
     <footer>
      
     </footer>
+    </div>
   </>
   );
 }

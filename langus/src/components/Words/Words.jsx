@@ -1,18 +1,18 @@
 
 import React from 'react'
+import '../diction.json';
+import style from './style.module.scss';
 
-import style from './word.module.scss';
-
-export default function WordList(props) {
+export default function words(props) {
     return (
       <>
-    <div className={`${style.container}`}>
-    <ul className={`${style.listcontainer}`}>
-        <li className={`${style.item}`}>{props.en}</li>
-        <li className={`${style.item}`}>{props.ru}</li>
-        <li className={`${style.item}`}>{props.tr}</li>
+    <div className={style.container}>
+    <div className={style.listcontainer}>
+        <div className={style.item}>{props.en}</div>
+        <div className={style.item}>{props.ru}</div>
+        <div className={style.item}>{props.tr}</div>
         
-    </ul >
+    </div >
 
 </div>
 </>

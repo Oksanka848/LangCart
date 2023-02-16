@@ -1,0 +1,37 @@
+
+@import "../style.scss";
+.container {
+  grid-template-columns: 3fr ;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid;
+  margin-top: 1%;
+  padding: 1%;
+}
+
+.listcontainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  justify-content: center;
+  padding: 0;
+  column-gap: 5px;
+  font-family: initial;
+  font-size: inherit;
+  font-weight: 600;
+  color: rgb(110, 110, 110);
+  text-align: center;
+  
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 40px;
+  border-radius: 1em;
+  text-align: center;
+}
+.item{
+  list-style: none;
+  
+}

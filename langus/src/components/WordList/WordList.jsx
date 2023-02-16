@@ -1,16 +1,16 @@
 import React from 'react'
 import words from '../diction.json';
 import Words from '../Words/Words';
-import style from '../Words/word.module.scss';
+import style from './style.module.scss';
 export default function WordList() {
   return (
     <><div className={style.container}>
-    <ul className={style.listcontainer}>
-        <li className={style.item}> Слово</li>
-        <li className={style.item}>Перевод</li>
-        <li className={style.item}>Транскрипция</li>
-                <li className={style.item}></li>
-    </ul >
+    <div className={style.listcontainer}>
+        <div className={style.item}> Слово</div>
+        <div className={style.item}>Перевод</div>
+        <div className={style.item}>Транскрипция</div>
+                
+    </div >
     
 </div>{
       words.map((word) =>

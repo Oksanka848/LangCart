@@ -29,57 +29,6 @@ $padding-md: 3rem;
 $padding-sm: 2rem;
 $padding-xsm: 1rem;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-  color: rgb(80, 78, 78);
-}
-
-body {
-  font-family: var(--font-family);
-  font-size: var(--font-size-sm);
-  letter-spacing: 1px;
-}
-
-h1 {
-  font-size: var(--font-size-xl);
-  color: #333;
-}
-
-h2 {
-  font-size: var(--font-size-lg);
-  color: #444;
-}
-
-h3 {
-  font-size: var(--font-size-md);
-  color: #444;
-}
-
-h4 {
-  font-size: var(--font-size-sm);
-  color: #333;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-body {
-  font-family: $font-family;
-  font-size: $font-size-sm;
-  letter-spacing: 1px;
-}
 
 h1 {
   font-size: $font-size-xl;
@@ -105,47 +54,9 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
 
 i {
   font-size: $font-size-md;
 }
 
-/* Reusable classes */
 
-.place-items-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.d-grid {
-  display: grid;
-}
-
-.d-flex {
-  display: flex;
-}
-
-.margin-b {
-  margin-bottom: $margin-md;
-}
-
-.card-1 {
-  padding: $padding-sm;
-  border-radius: 1rem;
-  transition: 0.3s;
-  :hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  }
-}
-
-
-
-.ru-english-input {
-  font-size: $font-size-lg;
-  font-weight: 700;
-}

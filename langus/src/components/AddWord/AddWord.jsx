@@ -3,8 +3,9 @@ import '../diction.json';
 import style from './style.module.scss';
 
 /*import Button from '../Button/Button';*/
-
-export default function AddWord() {
+/*<div class="button">
+ <p>Write to Us &#x270E; </p>
+    	</div>*/export default function AddWord() {
    
       const [isEditMode, setIsEditMode] = useState(false);
 

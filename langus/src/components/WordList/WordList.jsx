@@ -6,17 +6,23 @@ export default function WordList() {
   return (
     <><div className={style.container}>
     <div className={style.listcontainer}>
-        <div className={style.item}> Слово</div>
-        <div className={style.item}>Перевод</div>
-        <div className={style.item}>Транскрипция</div>
-                
-    </div >
-    
-</div>{
+    <div type="text" className={style.item}> Слово</div>
+    <div type="text" className={style.item}>Перевод</div>
+    <div type="text" className={style.item}>Транскрипция</div> 
+        {
       words.map((word) =>
         <Words key={word.id} en={word.en} ru={word.ru} tr={word.tr}>
         </Words>
       )
-    }</>
+    }
+      
+   
+
+        
+        </div >
+        
+</div>
+
+</>
   )
 }

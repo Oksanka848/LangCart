@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import '../diction.json';
 import style from './style.module.scss';
-
+import words from '../diction.json';
+import Words from '../Words/Words';
 /*import Button from '../Button/Button';*/
 /*<div class="button">
  <p>Write to Us &#x270E; </p>
-    	</div>*/export default function AddWord() {
-   
+    	</div>*/export default function AddWord({item}) {
+            const { en, ru, tr } = item;
       const [isEditMode, setIsEditMode] = useState(false);
 
     const handleEditMode = () => {
@@ -23,12 +24,13 @@ import style from './style.module.scss';
     <>
        
                          
-                    <input type="text" className={style.input} ></input>
-                    <input type="text" className={style.input} ></input>
-                    <input type="text" className={style.input} ></input>
+                    <input type="text" className={style.input} >{ru}</input>
+                    <input type="text" className={style.input} >{en}</input>
+                    <input type="text" className={style.input} >{tr}</input>
+
                                         <div className={style.buttons}>
                         <div className={style.button} >Сохранить</div>
-                        <div className={style.button}  onClick={handleCancel}>Отмена</div>
+                        <div className={style.button}  onClick={handleEditMode}>Отмена</div>
                     </div>
                 </>
                 )
@@ -54,7 +56,7 @@ import style from './style.module.scss';
         
             return (
                 <div className={style.listcontainer}>
-                    {isEditMode ? saveCancelBtns() : editDeleteBtns()}
+                    {isEditMode ? handleEditMode() : handleEditMode()}
                 </div >
             )
         }

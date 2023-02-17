@@ -16,3 +16,12 @@ font-size: $font-size-sm;
 user-select: none;
 touch-action: manipulation;
 }
+.btn_grp {
+  display: flex;
+  flex-direction: row;
+  width: 40px;
+  height: 40px;
+  border-radius: 1em;
+  text-align: center;
+
+}

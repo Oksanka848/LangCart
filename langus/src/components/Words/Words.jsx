@@ -3,7 +3,7 @@ import React from 'react'
 import '../diction.json';
 import style from './style.module.scss';
 
-export default function words(props) {
+export default function Words(props) {
     return (
       <>
     <div className={style.container}>

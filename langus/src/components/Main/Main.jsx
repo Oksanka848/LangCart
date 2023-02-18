@@ -1,5 +1,6 @@
 import React from 'react';
-import AddWord from '../AddWord/AddWord';
+import words from '../diction.json';
+import Cards from '../Cards/Cards';
 import WordList from '../WordList/WordList';
 
 import style from './style.module.scss';
@@ -9,7 +10,18 @@ export default function Main() {
     <>
     <div className={style.main}>
     
-    <section ><AddWord/></section>
+    <section >
+    <div className={style.cardrow}>
+      
+    {
+      words.map((word) =>
+        <Cards key={word.id} en={word.en} ru={word.ru} tr={word.tr}>
+        </Cards>
+        
+      )
+    }
+    </div>
+          </section>
     <section ><WordList/></section>
    
     </div>

@@ -11,8 +11,22 @@
   grid-gap: 10px;
 }
 section {
-  padding: 20px;
+  display: flex;
+  flex: auto;
+  min-height: 100vh;
+    padding: 20px;
   border: 1px solid $normal-purple-color;
   border-radius: 4px;
   color: $dark-purple-color;
+  
+}
+.cardrow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;  
+  min-width: 780px;
+  width: 100%;
+  height: 500px;
 }

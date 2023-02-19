@@ -1,23 +1,24 @@
 .App {
-  display: grid; /* applies grid layout affecting it's children */
-  grid-template-columns: 240px 1fr; /* define the number and sizes of columns */
-  grid-template-rows: 10% 1fr 5%; /* defines the number ans sizes of rows*/
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 10% 1fr 5%;
   grid-template-areas:
     'header header'
     'main main'
-    'footer footer'; /* assigns the labeled grid-area to the grid layout, note there has to be two columns and three rows as per the grid template rows/ columns defined */
-  height: 100vh;
+    'footer footer';
+  height: 100%;
 }
 
 header {
-  grid-area: 'header'; /* assigns the grid-area label*/
+  grid-area: 'header';
   background-color: rgb(245, 245, 245);
 }
 
-  main {
+main {
   grid-area: 'main';
   background-color: rgb(255, 255, 255);
 }
+
 footer {
   grid-area: 'footer';
   background-color: rgb(245, 245, 245);

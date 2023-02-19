@@ -1,42 +1,54 @@
 import React, { useState } from 'react'
-import '../diction.json';
-import style from './style.module.scss';
 import words from '../diction.json';
+import style from './style.module.scss';
 import Words from '../Words/Words';
-/*import Button from '../Button/Button';*/
-/*<div class="button">
- <p>Write to Us &#x270E; </p>
-    	</div>*/export default function AddWord({item}) {
-            const { en, ru, tr } = item;
-      const [isEditMode, setIsEditMode] = useState(false);
 
+export default function AddWord(props) {
+    const { en, ru, tr } = props;
+    const [isEditMode, setIsEditMode] = useState(false);
+    const [isCancel, setIsCancel] = useState(false);
     const handleEditMode = () => {
         setIsEditMode(!isEditMode);
     };
 
     const handleCancel = () => {
-        setIsEditMode(!isEditMode);
-    }
+        setIsCancel(!isCancel);
+    };
 
-    const saveCancelBtns = () => {
-     
-  return (
-    <>
-       
-                         
-                    <input type="text" className={style.input} >{ru}</input>
-                    <input type="text" className={style.input} >{en}</input>
-                    <input type="text" className={style.input} >{tr}</input>
+    return (
 
-                                        <div className={style.buttons}>
-                        <div className={style.button} >Сохранить</div>
-                        <div className={style.button}  onClick={handleEditMode}>Отмена</div>
-                    </div>
-                </>
-                )
-    }
+        <div className={style.container}>
+            <div className={style.listcontainer}>
+                {isEditMode ? handleEditMode(
+                    <> <input className={style.input} >{en}</input>
+                        <input className={style.input} >{ru}</input>
+                        <input className={style.input} >{tr}</input></>
+                ) : handleCancel(
+                    <> <div className={style.item}>{en}</div>
+                        <div className={style.item}>{ru}</div>
+                        <div className={style.item}>{tr}</div></>
 
-    const editDeleteBtns = () => {
+                )}
+                <div className={style.buttons}>
+                    <div className={style.button} onClick={handleEditMode}>Редактировать</div>
+                    <div className={style.button} onClick={handleCancel}>Отмена</div>
+                </div>
+
+                {
+                    words.map((word) =>
+                        <Words key={word.id} en={word.en} ru={word.ru} tr={word.tr}>
+                        </Words>
+                    )
+                }
+            </div ></div>
+
+    )
+}
+
+
+
+/*
+ const editDeleteBtns = () => {
         return (
            
                 <>
@@ -56,7 +68,16 @@ import Words from '../Words/Words';
         
             return (
                 <div className={style.listcontainer}>
-                    {isEditMode ? handleEditMode() : handleEditMode()}
+                    {isEditMode ? handleEditMode() : handleCancel()}
                 </div >
             )
-        }
+
+            <div type="text" className={style.item}>{en}</div>
+    <div type="text" className={style.item}>{ru}</div>
+    <div type="text" className={style.item}>{tr}</div>
+    <div className={style.buttons}>
+                        <div className={style.button} onClick={handleEditMode}>Редактировать</div>
+                        <div className={style.button}  onClick={handleCancel}>Отмена</div>
+                    </div> 
+
+*/

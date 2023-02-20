@@ -9,36 +9,25 @@ export default function AddWord(props) {
     const handleEditMode = () => {
         setIsEditMode(!isEditMode);
     };
-
     const handleCancel = () => {
         setIsCancel(!isCancel);
     };
-
     return (
-
         <div className={style.listwrap}>
             <div className={style.listcontainer}>
                 {isEditMode ? (
-                    <> <input className={style.input} value={en} onChange={()=>(isEditMode)}/>
-                        <input className={style.input} value={ru} onChange={()=>(isEditMode)}/>
-                        <input className={style.input} value={tr}  onChange={()=>(isEditMode)}/></>
+                    <> <input className={style.input} value={en} onChange={() => (isEditMode)} />
+                        <input className={style.input} value={ru} onChange={() => (isEditMode)} />
+                        <input className={style.input} value={tr} onChange={() => (isEditMode)} /></>
                 ) : (
-                    
-                        
-                          <Words key={props.id} en={props.en} ru={props.ru} tr={props.tr} />
-                        
-                        )
-                      
-
+                    <Words key={props.id} en={props.en} ru={props.ru} tr={props.tr} />
+                )
                 }
                 <div className={style.buttons}>
                     <div className={style.button} onClick={handleEditMode}>Редактировать</div>
                     <div className={style.button} onClick={handleCancel}>Отмена</div>
                 </div>
-
-                
             </div ></div>
-
     )
 }
 

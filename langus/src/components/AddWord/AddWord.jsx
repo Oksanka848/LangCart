@@ -19,9 +19,9 @@ export default function AddWord(props) {
         <div className={style.listwrap}>
             <div className={style.listcontainer}>
                 {isEditMode ? (
-                    <> <input className={style.input} value=" " />
-                        <input className={style.input} value=" " />
-                        <input className={style.input} value=" " /></>
+                    <> <input className={style.input} value={en} onChange={isEditMode} />
+                        <input className={style.input} value={ru} onChange={isEditMode} />
+                        <input className={style.input} value={tr}  onChange={isEditMode}/></>
                 ) : (
                     <> <div className={style.item}>{en}</div>
                         <div className={style.item}>{ru}</div>

@@ -1,12 +1,13 @@
 
 @import "../style.scss";
 .container {
-  grid-template-columns: 3fr ;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   overflow: hidden;
   border: 1px solid;
   margin-top: 1%;
-  padding: 1%;
+  padding: 2%;
 }
 
 .listcontainer{

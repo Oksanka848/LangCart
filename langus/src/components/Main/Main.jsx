@@ -2,8 +2,10 @@ import React from 'react';
 import words from '../diction.json';
 import Cards from '../Cards/Cards';
 import WordList from '../WordList/WordList';
+import AddWord from '../AddWord/AddWord';
 
 import style from './style.module.scss';
+
 
 export default function Main() {
   return (
@@ -20,7 +22,13 @@ export default function Main() {
           </div>
         </section>
         <section ><WordList /></section>
-        <section ></section>
+        <section >
+        {
+          words.map((word) =>
+              <AddWord key={word.id} en={word.en} ru={word.ru} tr={word.tr}>
+              </AddWord>
+          )
+      }</section>
       </div>
     </>
   )

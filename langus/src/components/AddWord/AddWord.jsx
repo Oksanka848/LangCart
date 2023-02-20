@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import words from '../diction.json';
 import style from './style.module.scss';
-import Words from '../Words/Words';
+
 
 export default function AddWord(props) {
     const { en, ru, tr } = props;
@@ -17,13 +16,13 @@ export default function AddWord(props) {
 
     return (
 
-        <div className={style.container}>
+        <div className={style.listwrap}>
             <div className={style.listcontainer}>
-                {isEditMode ? handleEditMode(
-                    <> <input className={style.input} >{en}</input>
-                        <input className={style.input} >{ru}</input>
-                        <input className={style.input} >{tr}</input></>
-                ) : handleCancel(
+                {isEditMode ? (
+                    <> <input className={style.input} value=" " />
+                        <input className={style.input} value=" " />
+                        <input className={style.input} value=" " /></>
+                ) : (
                     <> <div className={style.item}>{en}</div>
                         <div className={style.item}>{ru}</div>
                         <div className={style.item}>{tr}</div></>
@@ -34,12 +33,7 @@ export default function AddWord(props) {
                     <div className={style.button} onClick={handleCancel}>Отмена</div>
                 </div>
 
-                {
-                    words.map((word) =>
-                        <Words key={word.id} en={word.en} ru={word.ru} tr={word.tr}>
-                        </Words>
-                    )
-                }
+                
             </div ></div>
 
     )

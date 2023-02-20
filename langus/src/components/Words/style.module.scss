@@ -8,7 +8,8 @@
 
 .listcontainer{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 2%;
   justify-content: center;
   padding: 0;
   column-gap: 5px;

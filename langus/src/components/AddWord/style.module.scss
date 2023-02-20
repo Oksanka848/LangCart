@@ -1,6 +1,11 @@
 @import "../style.scss";
 @import "../Words/style.module.scss"; 
 
+.listwrap {
+  display: flex;
+margin: 2%;
+}
+
 .button {
   background-color: $normal-purple-color;
 border-radius: 100px;

@@ -11,7 +11,8 @@
 
 .listcontainer{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 2%;
   justify-content: center;
   padding: 0;
   column-gap: 5px;
@@ -20,8 +21,7 @@
   font-weight: 600;
   color: rgb(110, 110, 110);
   text-align: center;
-  
-}
+  }
 
 .item{
   list-style: none;

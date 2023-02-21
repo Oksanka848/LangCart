@@ -23,14 +23,15 @@ export default function AddWord(props) {
                     <div className={style.button} onClick={handleEditMode}>Сохранить</div>
                     <div className={style.button} onClick={handleCancel}>Отмена</div>
                 </div></>
-                ) : (
+                ) : (<>
                     <Words key={props.id} en={props.en} ru={props.ru} tr={props.tr} />
-                )
-                }
-                <div className={style.buttons}>
+                    <div className={style.buttons}>
                     <div className={style.button} onClick={handleEditMode}>Редактировать</div>
                     <div className={style.button} onClick={handleCancel}>Удалить</div>
-                </div>
+                </div></>
+                )
+                }
+                
             </div ></div>
     )
 }

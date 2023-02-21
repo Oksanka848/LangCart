@@ -29,6 +29,7 @@ export default function Main() {
               </AddWord>
           )
       }</section>
+      <section></section>
       </div>
     </>
   )

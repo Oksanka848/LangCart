@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Cards from '../Cards/Cards'
+import words from '../diction.json';
 import style from './style.module.scss';
 
 
@@ -26,8 +27,8 @@ function Slids (){
     );
   }
   export default function Slider() {
-  
-    const [slideIndex, setSlideIndex] = useState(1)
+    
+    const [slideIndex, setSlideIndex] = useState(0);
 
     const nextSlide = () => {
         if(slideIndex !== Slids.length){
@@ -52,24 +53,24 @@ function Slids (){
     }
 
     return (
-        <div className={style.containerslider}>
+        <div className={style.container_slider}>
             {Cards.map((Card, index) => {
 
                 return (
                     <Cards
 
                     key={index}
-                    className={slideIndex === index + 1 ? "{slide active-anim}" : "{slide}"}
+                    className={slideIndex === index + 1 ? `{slide active-anim}` : `{slide}`}
                     
                           >
               </Cards>)})}
               <BtnSlider moveSlide={nextSlide} direction={"next"} />
             <BtnSlider moveSlide={prevSlide} direction={"prev"}/>
-            <div className="container-dots">
+            <div className={style.container_dots}>
                 {Array.from({length: 5}).map((Card, index) => (
                     <div 
                     onClick={() => moveDot(index + 1)}
-                    className={slideIndex === index + 1 ? "dot active" : "dot"}
+                    className={slideIndex === index + 1 ? `{dot active}` : `{dot}`}
                     ></div>
                 ))}
             </div>

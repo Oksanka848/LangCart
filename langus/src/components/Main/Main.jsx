@@ -3,7 +3,7 @@ import words from '../diction.json';
 import Cards from '../Cards/Cards';
 import WordList from '../WordList/WordList';
 import AddWord from '../AddWord/AddWord';
-
+import Slider from '../Slider/Slider';
 import style from './style.module.scss';
 
 
@@ -29,7 +29,7 @@ export default function Main() {
               </AddWord>
           )
       }</section>
-      <section></section>
+      <section><Slider/></section>
       </div>
     </>
   )

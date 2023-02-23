@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import style from './style.module.scss';
 
+
 export default function Cards(props) {
   const { en, tr, ru } = props;
   const [click, setClick] = useState(props.click || false);

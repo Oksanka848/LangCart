@@ -10,7 +10,7 @@ export default function AddWord(props) {
         setIsEditMode(!isEditMode);
     };
     const handleCancel = () => {
-        setIsCancel(!isCancel );
+        setIsCancel(!isCancel);
     };
     return (
         <div className={style.listwrap}>

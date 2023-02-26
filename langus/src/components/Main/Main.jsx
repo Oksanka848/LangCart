@@ -23,13 +23,12 @@ export default function Main() {
         </section>
         <section ><WordList /></section>
         <section >
-        {
-          words.map((word) =>
-              <AddWord key={word.id} en={word.en} ru={word.ru} tr={word.tr}>
-              </AddWord>
-          )
-      }</section>
-      <section><Slider/></section>
+          {
+            words.map((word) =>
+              <AddWord key={word.id} en={word.en} ru={word.ru} tr={word.tr}/>)
+          }</section>
+        <section>
+          <Slider /></section>
       </div>
     </>
   )

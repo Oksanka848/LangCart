@@ -1,0 +1,27 @@
+.App {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 10% 1fr 5%;
+  grid-template-areas:
+    'header header'
+    'main main'
+    'footer footer';
+  height: 100%;
+
+  header {
+    grid-area: header;
+    background-color: rgb(245, 245, 245);
+  }
+  
+  main {
+    grid-area: main;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  footer {
+    grid-area: footer;
+    background-color: rgb(245, 245, 245);
+  }
+  
+}
+

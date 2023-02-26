@@ -1,44 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import words from '../diction.json';
-//import Cards from '../Cards/Cards';
 import Slides from './Slides';
 import style from './style.module.scss';
 
 export default function Slider() {
-const [count, setCount] = useState (0);
-
-function handlePrev(){
-  if(count !== setCount){
-    setCount(count - 1)
-  } 
-  else if (count === Slides.length){
-    setCount(count + 1)
+  const [count, setCount] = useState(0);
+  function handlePrev() {
+    if (count !== setCount) {
+      setCount(count - 1)
+    }
+    else if (count === Slides.length) {
+      setCount(count + 1)
+    }
   }
-}
-
-function handleNext(){
-  if(count !== setCount){
-    setCount(count + 1)
+  function handleNext() {
+    if (count !== setCount) {
+      setCount(count + 1)
+    }
+    else if (count === Slides.length) {
+      setCount(Slides.length)
+    }
   }
-  else if (count === Slides.length){
-    setCount(Slides.length)
-  }
-}
-
-return (
-  <>
-    <div className={style.container_slider}>
-       <button onClick={() => handlePrev()}  >&#8592;</button>
-        <Slides key={words[count]} words = {words[count] || {en:'', tr:'', ru:'', id:''}}
-     
-    />        
-    <button onClick={() => handleNext()} >&#8594;</button> 
-            
-                </div>
-                                </>
-                  
-)
-
+  return (
+    <>
+      <div className={style.container_slider}>
+        <button onClick={() => handlePrev()}  >&#8592;</button>
+        <Slides key={words[count]} words={words[count] || { en: '', tr: '', ru: '', id: '' }}/>
+        <button onClick={() => handleNext()} >&#8594;</button>
+      </div>
+    </>
+  )
 }
 
 /*useEffect(() => {

@@ -1,40 +1,33 @@
 @import "../style.scss";
-
 @import "../Cards/style.module.scss";
 
-.container_slider {
+.container_wrap {
   height: 600px;
-  margin: 4%;
-  align-items: center;
+  margin: 1%;
   justify-content: center;
+  align-items: center;
   display: flex;
-  
-  overflow: hidden;
+  flex-direction: column;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.slide {
-
-  display: flex;
-  justify-content: center;
+.container_slider {
+  min-width: 100%;
+  flex-wrap: nowrap;
   align-items: center;
-  opacity: 0;
-  transition: opacity ease-in-out 0.4s;
+  justify-content: center;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
 }
-
-.active-anim {
-  opacity: 1;
-}
-
 
 button {
-
+  display: flex;
   background-color: $normal-purple-color;
   border-radius: 50px;
   box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
   color: $dark-purple-color;
   cursor: pointer;
-  display: inline-block;
   font-family: $font-family;
   padding: 0.011% 8%;
   text-align: center;
@@ -44,33 +37,10 @@ button {
   user-select: none;
   touch-action: manipulation;
   font-size: $font-size-md;
+
   &:hover {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
     z-index: 1;
     font-size: 108%;
   }
 }
-
-.container_dots {
-
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  margin: .125rem 0;
-}
-
-.dot {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 3px solid #f1f1f1;
-  margin: 0 5px;
-  background: #f1f1f1;
-  content: "";
-  background-color: #d8d8d8;
-  border-radius: 50%;
-  transition: background-color .3s ease 0s;
-
-}
-
-

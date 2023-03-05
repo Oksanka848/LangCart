@@ -18,7 +18,6 @@ export default function Slider() {
     }
   }
   const cardIndex = () => {
-
     if (count !== words.length) {
       setCount(count + 1);
     }
@@ -27,7 +26,7 @@ export default function Slider() {
     <>
       <div className={style.container_wrap}>
         <div className={style.container_slider}>
-          <button onClick={() => handlePrev()}  >&#8592;</button>
+          <button onClick={() => handlePrev()} >&#8592;</button>
           <Slides key={words[count]} words={words[count]} cardIndex={cardIndex} />
           <button onClick={() => handleNext()} >&#8594;</button>
         </div>

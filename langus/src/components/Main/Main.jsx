@@ -6,7 +6,6 @@ import AddWord from '../AddWord/AddWord';
 import Slider from '../Slider/Slider';
 import style from './style.module.scss';
 
-
 export default function Main() {
   return (
     <>

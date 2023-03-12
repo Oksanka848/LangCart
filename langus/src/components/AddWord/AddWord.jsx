@@ -31,44 +31,6 @@ export default function AddWord(props) {
                 </div></>
                 )
                 }
-                
-            </div ></div>
+                            </div ></div>
     )
 }
-
-
-
-/*
- const editDeleteBtns = () => {
-        return (
-           
-                <>
-                    
-                    <div className={style.item}></div>
-        <div className={style.item}></div>
-        <div className={style.item}></div>
-        
-    
-                                       <div className={style.buttons}>
-                        <div className={style.btn}></div>
-                        <div className={style.button} onClick={handleEditMode}>Добавить</div>
-                    </div>
-                    
-                </>
-            )}
-        
-            return (
-                <div className={style.listcontainer}>
-                    {isEditMode ? handleEditMode() : handleCancel()}
-                </div >
-            )
-
-            <div type="text" className={style.item}>{en}</div>
-    <div type="text" className={style.item}>{ru}</div>
-    <div type="text" className={style.item}>{tr}</div>
-    <div className={style.buttons}>
-                        <div className={style.button} onClick={handleEditMode}>Редактировать</div>
-                        <div className={style.button}  onClick={handleCancel}>Отмена</div>
-                    </div> 
-
-*/

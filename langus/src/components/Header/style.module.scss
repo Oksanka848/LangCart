@@ -1,14 +1,36 @@
 
 @import "../style.scss";
 
-.hero_wrapp {
+.header {
+    width: 100%;
     display: flex;
+    align-items: first baseline;
+    justify-content: space-between;
+    color: $dark-purple-color;
+    padding: 0 15px;
+    background-color: rgb(245, 245, 245);
+}
+
+.header_container {
+    padding: 0.5em 6em;
+    
+    
+    z-index: 10;
+    background-color: rgb(245, 245, 245);
+    position: fixed;
+    
+  }
+
+.header_wrapp {
+    width: 100%;
+    display: flex;
+    position: relative;
     flex-wrap: wrap;
     align-items: center;
     border-bottom: 1px solid $dark-orange-color;
 }
 
-._section{
+.header_section{
     flex-basis: 350px;
     flex-grow: 1;
     margin: 10px 10px;

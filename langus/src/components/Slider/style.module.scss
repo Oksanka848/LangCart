@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  color: $dark-purple-color;
 }
 
 .container_slider {
@@ -19,16 +20,19 @@
   align-self: center;
   display: flex;
   flex-direction: row;
+  
 }
   button {
   display: flex;
+  
+  align-items: center;
   background-color: $normal-purple-color;
   border-radius: 50px;
   box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
   color: $dark-purple-color;
   cursor: pointer;
   font-family: $font-family;
-  padding: 0.011% 8%;
+  padding: 0.011% 3%;
   text-align: center;
   text-decoration: none;
   transition: all 250ms;

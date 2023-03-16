@@ -1,25 +1,12 @@
-
 @import "../style.scss";
-
-.header {
-    width: 100%;
-    display: flex;
-    align-items: first baseline;
-    justify-content: space-between;
-    color: $dark-purple-color;
-    padding: 0 15px;
-    background-color: rgb(245, 245, 245);
-}
 
 .header_container {
     padding: 0.5em 6em;
-    
-    
+    top: 0;
     z-index: 10;
     background-color: rgb(245, 245, 245);
-    position: fixed;
-    
-  }
+    position: sticky;
+    }
 
 .header_wrapp {
     width: 100%;
@@ -27,7 +14,6 @@
     position: relative;
     flex-wrap: wrap;
     align-items: center;
-    border-bottom: 1px solid $dark-orange-color;
 }
 
 .header_section{
@@ -37,9 +23,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    height: 100px;
+    padding: 2%;
     border: 1px solid $normal-purple-color;
     border-radius: 4px;
     color: $dark-orange-color;
+    color: rgb(99, 52, 186);
+}
+.container_wrap {
+    place-content: start center;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cardrow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22%, 1fr));
+    grid-gap: 1rem;
 }

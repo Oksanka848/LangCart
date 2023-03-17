@@ -1,44 +1,47 @@
 @import "../style.scss";
 
 .header_container {
-    padding: 0.5em 6em;
-    top: 0;
-    z-index: 10;
-    background-color: rgb(245, 245, 245);
-    position: sticky;
-    }
+  top: 0;
+  z-index: 10;
+  background-color: rgb(245, 245, 245);
+  position: sticky;
+}
 
 .header_wrapp {
-    width: 100%;
-    display: flex;
-    position: relative;
-    flex-wrap: wrap;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.header_section{
-    flex-basis: 350px;
-    flex-grow: 1;
-    margin: 10px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2%;
-    border: 1px solid $normal-purple-color;
-    border-radius: 4px;
-    color: $dark-orange-color;
-    color: rgb(99, 52, 186);
-}
-.container_wrap {
-    place-content: start center;
-    margin: 1%;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.header_section {
+  flex-basis: 350px;
+  flex-grow: 1;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid $normal-purple-color;
+  border-radius: 4px;
+  color: $dark-orange-color;
+  color: rgb(99, 52, 186);
 }
 
-.cardrow {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(22%, 1fr));
-    grid-gap: 1rem;
+.logo {
+  display: flex;
+  height: 96px;
+  width: 96px;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('mylogo.svg');
+
+  &:hover {
+    color: $dark-purple-color;
+    transform: scale(1.17);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+    z-index: 10;
+    box-shadow: 0 13px 10px -7px rgba(245, 245, 245, 0.5);
+  }
 }

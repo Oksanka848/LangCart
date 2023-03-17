@@ -8,35 +8,35 @@
     'footer footer';
   height: 100%;
   width: 100%;
-
   header {
     grid-area: header;
-    
+    top: 0;
+    z-index: 10;
+    background-color: rgb(245, 245, 245);
+    position: sticky;
   }
-  
+
   main {
     grid-area: main;
     background-color: rgb(255, 255, 255);
-   
   }
-  
+
   footer {
     grid-area: footer;
     background-color: rgb(245, 245, 245);
   }
 
-  ul {
+  nav {
     display: inline-flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-content: center;
+    ul {
+      display: inline-flex;
+      align-items: center;
+      li {
+        list-style: none;
+        margin-left: 5%;
+      }
+    }
   }
-  li {
-    list-style: none;
-    margin-left: 5%;
-    display: inline-flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-items: space-between;
-  }
-  
 }
-

@@ -1,5 +1,6 @@
-@import "../style.scss";
-@import "../Words/style.module.scss";
+@import "../../style.scss";
+
+@import "../../components/Words/style.module.scss";
 
 .listwrap {
   display: flex;
@@ -25,7 +26,7 @@
   touch-action: manipulation;
 
   &:focus {
-    border: 2px solid #713bc1;
+    border: 2px solid rgb(113, 59, 193);
     outline: none;
   }
 

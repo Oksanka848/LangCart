@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import style from './style.module.scss';
-import Words from '../Words/Words';
+import Words from '../../components/Words/Words';
 
 export default function AddWord(props) {
     const { en, ru, tr } = props;

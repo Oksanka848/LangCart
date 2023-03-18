@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import words from '../diction.json';
+import words from '../../components/diction.json';
 import Slides from './Slides';
 import style from './style.module.scss';
 

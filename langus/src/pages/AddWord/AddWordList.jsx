@@ -1,6 +1,6 @@
 import React from 'react';
-import words from '../diction.json';
-import AddWord from '../AddWord/AddWord';
+import words from '../../components/diction.json';
+import AddWord from './AddWord';
 
 export default function AddWordList() {
   return (

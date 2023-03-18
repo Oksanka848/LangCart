@@ -1,6 +1,6 @@
 import React from 'react'
-import words from '../diction.json'
-import Words from '../Words/Words';
+import words from '../../components/diction.json'
+import Words from '../../components/Words/Words';
 import style from './style.module.scss';
 export default function WordList() {
   return (

@@ -1,8 +1,6 @@
 import React from 'react';
 import Cards from '../Cards/Cards';
-import WordList from '../WordList/WordList';
-import AddWordList from '../AddWord/AddWordList';
-import Slider from '../Slider/Slider';
+import {WordList, AddWordList, Slider} from '../index'
 import style from './style.module.scss';
 import { Routes, Route, Link } from "react-router-dom";
 export default function Main() {
@@ -10,12 +8,18 @@ export default function Main() {
     <>
       <div className={style.container_wrap}>
                     <Routes>
-              <Route path="/Cards" element={<Cards/>} />
-              <Route path="/" element={<WordList />} />
-              <Route path="/AddWordList" element={<AddWordList />} />
-              <Route path="/Slider" element={<Slider />} />
+                      
+              <Route exact path="/Cards" element={<Cards/>} />
+              
+              <Route exact path="/AddWordList" element={<AddWordList />} />
+              <Route exact path="/Slider" element={<Slider />} />
+              
+              
+              <Route exact path="/" element={<WordList />} />
               <Route path="*" element={<NoMatch />} />
+              <Route/>
             </Routes>
+
             </div>
     </>
   )

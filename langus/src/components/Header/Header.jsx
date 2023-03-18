@@ -11,7 +11,7 @@ export default function Header() {
             <nav>
               <ul>
                 <li>
-                  <Link to="/WordList"><span className={style.logo}></span></Link>
+                  <Link to="/" ><span className={style.logo}></span></Link>
                 </li>
                 <li>
                   <Link to="/Cards">Cards</Link>

@@ -36,6 +36,9 @@
       li {
         list-style: none;
         margin-left: 5%;
+        a.activ {
+          border: 1px solid hsl(300, 27%, 22%);
+        }
       }
     }
   }

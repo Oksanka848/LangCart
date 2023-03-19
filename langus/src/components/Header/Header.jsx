@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { CustomLink } from './CustomLink';
 import style from './style.module.scss';
 
 export default function Header() {
@@ -11,16 +11,16 @@ export default function Header() {
             <nav>
               <ul>
                 <li>
-                  <Link to="/" ><span className={style.logo}></span></Link>
+                  <CustomLink to="/" end><img src={require('./mylogo.svg')} alt="Home" className={style.logo}/></CustomLink>
                 </li>
                 <li>
-                  <Link to="/Cards">Cards</Link>
+                  <CustomLink to="/Cards" end>Cards</CustomLink>
                 </li>
                 <li>
-                  <Link to="/AddWordList">AddWord</Link>
+                  <CustomLink to="/AddWordList" end>AddWord</CustomLink>
                 </li>
                 <li>
-                  <Link to="/Slider">Slider</Link>
+                  <CustomLink to="/Slider" end>Slider</CustomLink>
                 </li>
               </ul>
             </nav>

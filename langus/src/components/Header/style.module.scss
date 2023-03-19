@@ -36,6 +36,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url('mylogo.svg');
+place-content: center;
 
   &:hover {
   transform: scale(1.17);

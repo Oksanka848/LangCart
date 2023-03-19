@@ -1,7 +1,14 @@
 import React from 'react'
+import { CustomLink } from '../../components/Header/CustomLink';
 
 export default function PageError() {
   return (
-    <div>PageError</div>
-  )
+    <>
+      <p>Nothing to see here!</p>
+      <p>
+        <CustomLink to="/">Go to the home page</CustomLink>
+      </p>
+      <img src={require('./image.jpg')} alt="PageError"/>
+    </>
+  );
 }

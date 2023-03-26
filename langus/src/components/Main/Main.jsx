@@ -1,6 +1,5 @@
 import React from 'react';
-import Cards from '../Cards/Cards';
-import { WordList, AddWordList, Slider, PageError } from '../index'
+import { WordList, AddWordList, Slider, PageError, Cards } from '../index'
 import style from './style.module.scss';
 import { Routes, Route } from "react-router-dom";
 

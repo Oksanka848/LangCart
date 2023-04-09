@@ -1,6 +1,6 @@
-import React, { useRef, useState, forwardRef } from 'react';
+import React, { useRef, useState } from 'react';
 import words from '../../components/diction.json';
-import Card from './Card';
+import Card from '../../components/Card/Card';
 import style from './style.module.scss';
 export default function Cards() {
   const [count, setCount] = useState(0);

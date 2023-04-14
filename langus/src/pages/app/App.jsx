@@ -1,9 +1,9 @@
 //import Main from '../../components/Main/Main';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 import { BrowserRouter as Router } from "react-router-dom";
-import Main from '../../components/Main/Main';
+import Main from '../Main/Main';
 
 export default function App() {
   return (

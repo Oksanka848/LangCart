@@ -1,5 +1,5 @@
 import React from 'react';
-import { WordList, AddWordList, Slider, PageError, Cards } from '../index'
+import { WordList, AddWordList, Slider, PageError, Cards } from '../../components/index';
 import style from './style.module.scss';
 import { Routes, Route } from "react-router-dom";
 

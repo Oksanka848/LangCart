@@ -1,5 +1,5 @@
 import React from 'react'
-import { CustomLink } from '../../components/Header/CustomLink';
+import { CustomLink } from '../../pages/Header/CustomLink';
 
 export default function PageError() {
   return (

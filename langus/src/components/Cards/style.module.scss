@@ -82,3 +82,13 @@
   }
 
 }
+.countbox{
+  flex-basis: 2%;
+  flex-grow: 1;
+  margin: 0.01%;
+  border: 1px solid $normal-purple-color;
+  border-radius: 4px;
+  color: $dark-orange-color;
+  color: rgb(99, 52, 186);
+  text-align: center;
+}

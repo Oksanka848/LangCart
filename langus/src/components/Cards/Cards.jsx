@@ -7,9 +7,6 @@ export default function Cards() {
   const countWord = () => {
     setCount(count + 1);
   };
-
-  
-
   return (
     <>
     <div className={style.countbox}>теперь вы знаете {count} слов(а)</div>
@@ -18,7 +15,6 @@ export default function Cards() {
           words.map((word) =>
             <Card key={word.id} en={word.en} ru={word.ru} tr={word.tr}
             countWord={countWord} />
-
           )
         }
       </div>

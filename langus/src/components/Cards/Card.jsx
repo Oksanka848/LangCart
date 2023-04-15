@@ -1,5 +1,5 @@
 import React, { useState,
-  forwardRef, } from 'react';
+   } from 'react';
 import style from './style.module.scss';
 
 
@@ -10,7 +10,7 @@ export default function Card(props) {
 
   const handleClick = () => {
     setClick(!click);
-
+props.countWord();
   };
 
   return (

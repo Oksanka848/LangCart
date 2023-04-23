@@ -8,12 +8,10 @@ export default function AddWord(props) {
     const [isEditMode, setIsEditMode] = useState(0);
     const [value, setValue] = useState('');
 
-
     const handleEditMode = (props, e) => { //редактирование поля
         e = e || window.event;
         setIsEditMode ({...isEditMode.props, ...{[props]: e.target.value}});
     };
-
 
     const add = () => { // добавление элемента
         setWords([...words]);

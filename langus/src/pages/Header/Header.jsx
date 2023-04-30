@@ -11,7 +11,7 @@ export default function Header() {
             <nav>
               <ul>
                 <li>
-                  <CustomLink to="/" end><img src={require('./mylogo.svg')} alt="Home" className={style.logo}/></CustomLink>
+                  <CustomLink to="/Words" end><img src={require('./mylogo.svg')} alt="Home" className={style.logo}/></CustomLink>
                 </li>
                 <li>
                   <CustomLink to="/Cards" end>Cards</CustomLink>

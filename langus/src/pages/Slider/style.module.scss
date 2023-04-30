@@ -42,8 +42,8 @@
   font-size: $font-size-md;
 
   &:hover {
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+    transition: all 0.4s ease-in;
     z-index: 1;
-    font-size: 108%;
+    font-size: 106%;
   }
 }

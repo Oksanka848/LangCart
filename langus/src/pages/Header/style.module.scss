@@ -30,14 +30,12 @@
 
 .logo {
   display: flex;
-  height: 96px;
+  padding-top: 10%;
   width: 96px;
   background-size: 90%;
   background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url('mylogo.svg');
-place-content: center;
-
+  background-position: center;
+  place-content: center;
   &:hover {
   transform: scale(1.17);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);

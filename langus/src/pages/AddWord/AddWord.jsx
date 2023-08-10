@@ -19,22 +19,22 @@ export default function AddWord(props) {
      /*const handleSave = () => { // завершение редактирования
         setIsEditMode(isEditMode);
     };*/
-     /*const changeValue = (e) => { // изменение содержания поля input
+    /* const changeValue = (e) => { // изменение содержания поля input
         setIsEditMode(e.target.value);
      }*/
-    const handleCancel = () => { // завершение редактирования
+    const handleCancel = () => { // отмена редактирования
         setIsEditMode(!isEditMode);
     };
-    //const handleCancel = (e) => {setIsEditMode([...props, ...{[props]: e.target.value}]);}
+    const handleSave = (e) => {setIsEditMode([...props, ...{[props]: e.target.value}]);}
     return (
         <div className={style.listwrap}>
             <div className={style.listcontainer}>
                 {isEditMode ? (
-                    <> <input className={style.input} value={isEditMode.en} defaultValue={en} onChange={(e) => setIsEditMode(e.target.value)} />
+                    <> <input className={style.input} value={isEditMode.en} defaultValue={en} onChange={(e) => handleEditMode(e.target.value)} />
                         <input className={style.input} value={isEditMode.ru} defaultValue={ru} onChange={(e) => handleEditMode(e.target.value)} />
                         <input className={style.input} value={isEditMode.tr} defaultValue={tr} onChange={(e) => handleEditMode(e.target.value)} />
                         <div className={style.buttons}>
-                        <div className={style.button} onClick={handleCancel}>Сохранить</div>
+                        <div className={style.button} onClick={handleSave}>Сохранить</div>
                     <div className={style.button} onClick={handleCancel}>Отмена</div>
                 </div></>
                 ) : (<> 

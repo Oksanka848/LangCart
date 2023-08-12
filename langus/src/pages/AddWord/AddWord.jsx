@@ -1,68 +1,119 @@
 import React, { useState } from 'react'
 import style from './style.module.scss';
-import Words from '../../components/Words/Words';
 
-export default function AddWord(props) {
-    const { en, ru, tr } = props;
-    //const [words, setWords] = useState(props);
-    const [isEditMode, setIsEditMode] = useState(props);
-    //const [value, setValue] = useState('');
-
-    const handleEditMode = (props, e) => { //редактирование поля
-        e = e || window.event;
-        setIsEditMode ({...isEditMode.props, ...{[props]: e.target.value}});
-    };
-
-    /*const add = () => { // добавление элемента
-        setWords([...words]);
-     }*/
-     /*const handleSave = () => { // завершение редактирования
-        setIsEditMode(isEditMode);
-    };*/
-    /* const changeValue = (e) => { // изменение содержания поля input
-        setIsEditMode(e.target.value);
-     }*/
-    const handleCancel = () => { // отмена редактирования
-        setIsEditMode(!isEditMode);
-    };
-    const handleSave = (e) => {setIsEditMode([...props, ...{[props]: e.target.value}]);}
-    return (
-        <div className={style.listwrap}>
-            <div className={style.listcontainer}>
-                {isEditMode ? (
-                    <> <input className={style.input} value={isEditMode.en} defaultValue={en} onChange={(e) => handleEditMode(e.target.value)} />
-                        <input className={style.input} value={isEditMode.ru} defaultValue={ru} onChange={(e) => handleEditMode(e.target.value)} />
-                        <input className={style.input} value={isEditMode.tr} defaultValue={tr} onChange={(e) => handleEditMode(e.target.value)} />
-                        <div className={style.buttons}>
-                        <div className={style.button} onClick={handleSave}>Сохранить</div>
-                    <div className={style.button} onClick={handleCancel}>Отмена</div>
-                </div></>
-                ) : (<> 
-                    <Words key={props.id} en={props.en} ru={props.ru} tr={props.tr} />
-                    <div className={style.buttons}>
-                    <div className={style.button} onClick={handleEditMode}>Редактировать</div>
-                    
-                    <div className={style.button} onClick={handleCancel}>Отмена</div>
-                </div></>
-                )
+export default function AddWord({ rows, actions }) {
+            const [isEditMode, setIsEditMode] = useState(false);
+        const [rowIDToEdit, setRowIDToEdit] = useState(undefined);
+        const [rowsState, setRowsState] = useState(rows);
+        const [editedRow, setEditedRow] = useState();
+              const handleEdit = (rowID) => {
+          setIsEditMode(true);
+          setEditedRow(undefined);
+          setRowIDToEdit(rowID);
+        }
+              const handleRemoveRow = (rowID) => {
+          const newData = rowsState.filter(row => {
+            return row.id !== rowID ? row : null
+          });
+                setRowsState(newData);
+        }
+              const handleOnChangeField = (e, rowID) => {
+          const { name: fieldName, value } = e.target;
+                setEditedRow({
+            id: rowID,
+            [fieldName]: value
+          })
+        }
+              const handleCancelEditing = () => {
+          setIsEditMode(false);
+          setEditedRow(undefined);
+        }
+              const handleSaveRowChanges = () => {
+          setTimeout(() => {
+            setIsEditMode(false);
+                  const newData = rowsState.map(row => {
+              if (row.id === editedRow.id) {
+                if (editedRow.en) row.en = editedRow.en;
+                if (editedRow.ru) row.ru = editedRow.ru;
+                if (editedRow.tr) row.tr = editedRow.tr;
+              }
+                    return row;
+            })
+                  setRowsState(newData);
+            setEditedRow(undefined)
+          })
+        }
+      
+        return (
+          <table className={style.listwrap}>
+                      <tbody>
+                        {rowsState.map((row) => {
+              return <tr className={style.listcontainer} key={row.id}>
+                <td>
+                  {row.id}
+                </td>
+                <td>
+                  { isEditMode && rowIDToEdit === row.id
+                    ? <input
+                    className={style.input}
+                      type='text'
+                      defaultValue={editedRow ? editedRow.en : row.en}
+                      id={row.id}
+                      name='en'
+                      onChange={ (e) => handleOnChangeField(e, row.id) }
+                    />
+                    : row.en
+                  }
+                </td>
+                <td>
+                  { isEditMode && rowIDToEdit === row.id
+                    ? <input
+                    className={style.input}
+                      type='text'
+                      defaultValue={editedRow ? editedRow.ru : row.ru}
+                      id={row.id}
+                      name='ru'
+                      onChange={ (e) => handleOnChangeField(e, row.id) }
+                    />
+                    : row.ru
+                  }
+                </td>
+                <td>
+                  { isEditMode && rowIDToEdit === row.id
+                    ? <input 
+                    className={style.input}
+                    defaultValue={editedRow ? editedRow.tr : row.tr}
+                    id={row.id}
+                    name="tr"
+                    onChange={e => handleOnChangeField(e, row.id)}  
+                    />
+                    : row.tr
+                  }
+                </td>
+                {actions &&
+                <td className={style.listcontainer}>
+                  { isEditMode && rowIDToEdit === row.id
+                    ? <div onClick={ () => handleSaveRowChanges() } className={style.button} disabled={!editedRow}>
+                      Сохранить
+                    </div>
+                    : <div  onClick={ () => handleEdit(row.id) } className={style.button}>
+                      Редактировать
+                    </div>
+                  }
+      
+                  { isEditMode && rowIDToEdit === row.id
+                    ? <div onClick={() => handleCancelEditing()} className={style.button}>
+                      Отменить
+                    </div>
+                    : <div onClick={() => handleRemoveRow(row.id)} className={style.button}>
+                      Удалить
+                    </div>
+                  }
+                </td>
                 }
-                            </div ></div>
-    )
-}
-/*{isEditMode ? (
-                    <> <input className={style.input} value={isEditMode.en} defaultValue={en} onChange={(e) => handleEditMode(e.target.value)} />
-                        <input className={style.input} value={isEditMode.ru} defaultValue={ru} onChange={(e) => handleEditMode(e.target.value)} />
-                        <input className={style.input} value={isEditMode.tr} defaultValue={tr} onChange={(e) => handleEditMode(e.target.value)} />
-                        <div className={style.buttons}>
-                        <div className={style.button} onClick={handleCancel}>Сохранить</div>
-                    <div className={style.button} onClick={handleCancel}>Отмена</div>
-                </div></>
-                ) : (<>
-                    <Words key={props.id} en={props.en} ru={props.ru} tr={props.tr} />
-                    <div className={style.buttons}>
-                    <div className={style.button} onClick={handleEditMode}>Редактировать</div>
-                    
-                    <div className={style.button} onClick={handleCancel}>Удалить</div>
-                </div></>
-                )
-                }*/
+              </tr>
+            })}
+            </tbody>
+          </table>
+        );
+      }

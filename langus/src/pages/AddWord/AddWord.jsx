@@ -6,11 +6,15 @@ export default function AddWord({ rows, actions }) {
   const [rowIDToEdit, setRowIDToEdit] = useState(undefined);
   const [rowsState, setRowsState] = useState(rows);
   const [editedRow, setEditedRow] = useState();
+  const [isValid, setisValid] = useState(false);
+
   const handleEdit = (rowID) => {
     setIsEditMode(true);
     setEditedRow(undefined);
     setRowIDToEdit(rowID);
+    setisValid(true);
   };
+  
   const handleRemoveRow = (rowID) => {
     const newData = rowsState.filter((row) => {
       return row.id !== rowID ? row : null;
@@ -19,10 +23,16 @@ export default function AddWord({ rows, actions }) {
   };
   const handleOnChangeField = (e, rowID) => {
     const { name: fieldName, value } = e.target;
+   // if (e.target.value === 0) {setisValid(false);}
+
     setEditedRow({
       id: rowID,
       [fieldName]: value,
+      
     });
+    const isVoid = value.trim().length === 0;
+    setisValid(!isVoid);
+    
   };
   const handleCancelEditing = () => {
     setIsEditMode(false);
@@ -36,12 +46,17 @@ export default function AddWord({ rows, actions }) {
           if (editedRow.en) row.en = editedRow.en;
           if (editedRow.ru) row.ru = editedRow.ru;
           if (editedRow.tr) row.tr = editedRow.tr;
+         
+          
         }
         return row;
       });
+     
       setRowsState(newData);
       setEditedRow(undefined);
+      
     });
+   
   };
 
   return (
@@ -69,6 +84,7 @@ export default function AddWord({ rows, actions }) {
                 {isEditMode && rowIDToEdit === row.id ? (
                   <input
                     className={style.input}
+                    style={{borderColor: !isValid ? "red" : "rgb(111, 0, 255)"}}
                     type="text"
                     defaultValue={editedRow ? editedRow.ru : row.ru}
                     id={row.id}
@@ -96,13 +112,15 @@ export default function AddWord({ rows, actions }) {
               {actions && (
                 <div className={style.buttons}>
                   {isEditMode && rowIDToEdit === row.id ? (
-                    <div
+                    <button
                       onClick={() => handleSaveRowChanges()}
                       className={style.button}
-                      disabled={!editedRow}
+                      //disabled={!editedRow && !isValid}
+                      disabled={!(editedRow && !isValid)}
+                      
                     >
                       Сохранить
-                    </div>
+                    </button>
                   ) : (
                     <div
                       onClick={() => handleEdit(row.id)}

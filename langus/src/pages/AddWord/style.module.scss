@@ -74,6 +74,10 @@ input {
     border: 2px solid #713bc1;
     outline: none;
   }
+  &.invalid {
+    border: 2px solid #e20b0b;
+    outline: none;
+  }
 
   &:hover {
     background-color: rgb(255, 255, 255);

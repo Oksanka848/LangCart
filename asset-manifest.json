@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/LangCart/static/css/main.6058d218.css",
-    "main.js": "/LangCart/static/js/main.1a625b07.js",
+    "main.css": "/LangCart/static/css/main.b431d9c0.css",
+    "main.js": "/LangCart/static/js/main.3788c0e7.js",
     "static/media/image.jpg": "/LangCart/static/media/image.2a5ea86897fad58e53a1.jpg",
     "static/media/mylogo.svg": "/LangCart/static/media/mylogo.b86c8537d8562d9b8ada80c999dd9f14.svg",
     "index.html": "/LangCart/index.html",
-    "main.6058d218.css.map": "/LangCart/static/css/main.6058d218.css.map",
-    "main.1a625b07.js.map": "/LangCart/static/js/main.1a625b07.js.map"
+    "main.b431d9c0.css.map": "/LangCart/static/css/main.b431d9c0.css.map",
+    "main.3788c0e7.js.map": "/LangCart/static/js/main.3788c0e7.js.map"
   },
   "entrypoints": [
-    "static/css/main.6058d218.css",
-    "static/js/main.1a625b07.js"
+    "static/css/main.b431d9c0.css",
+    "static/js/main.3788c0e7.js"
   ]
 }

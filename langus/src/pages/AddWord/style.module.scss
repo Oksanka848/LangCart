@@ -62,7 +62,7 @@
   margin-bottom: 1%;
 }
 
-input {
+.input {
   margin: 0.8em 0;
   height: 40px;
   padding-left: 1em;
@@ -74,11 +74,7 @@ input {
     border: 2px solid #713bc1;
     outline: none;
   }
-  &.invalid {
-    border: 2px solid #e20b0b;
-    outline: none;
-  }
-
+  
   &:hover {
     background-color: rgb(255, 255, 255);
   }

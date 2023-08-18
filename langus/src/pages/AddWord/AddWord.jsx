@@ -23,9 +23,7 @@ export default function AddWord({ rows, actions }) {
   };
   const handleOnChangeField = (e, rowID) => {
     const { name: fieldName, value } = e.target;
-   // if (e.target.value === 0) {setisValid(false);}
-
-    setEditedRow({
+       setEditedRow({
       id: rowID,
       [fieldName]: value,
       
@@ -46,17 +44,13 @@ export default function AddWord({ rows, actions }) {
           if (editedRow.en) row.en = editedRow.en;
           if (editedRow.ru) row.ru = editedRow.ru;
           if (editedRow.tr) row.tr = editedRow.tr;
-         
-          
         }
         return row;
       });
-     
       setRowsState(newData);
       setEditedRow(undefined);
       
     });
-   
   };
 
   return (
@@ -70,6 +64,7 @@ export default function AddWord({ rows, actions }) {
                 {isEditMode && rowIDToEdit === row.id ? (
                   <input
                     className={style.input}
+                    style={{borderColor: !isValid ? "rgb(230, 32, 10)" : "rgb(111, 0, 255)"}}
                     type="text"
                     defaultValue={editedRow ? editedRow.en : row.en}
                     id={row.id}
@@ -84,7 +79,7 @@ export default function AddWord({ rows, actions }) {
                 {isEditMode && rowIDToEdit === row.id ? (
                   <input
                     className={style.input}
-                    style={{borderColor: !isValid ? "red" : "rgb(111, 0, 255)"}}
+                    style={{borderColor: !isValid ? "rgb(230, 32, 10)" : "rgb(111, 0, 255)"}}
                     type="text"
                     defaultValue={editedRow ? editedRow.ru : row.ru}
                     id={row.id}
@@ -99,6 +94,7 @@ export default function AddWord({ rows, actions }) {
                 {isEditMode && rowIDToEdit === row.id ? (
                   <input
                     className={style.input}
+                    style={{borderColor: !isValid ? "rgb(230, 32, 10)" : "rgb(111, 0, 255)"}}
                     defaultValue={editedRow ? editedRow.tr : row.tr}
                     id={row.id}
                     name="tr"
@@ -115,9 +111,7 @@ export default function AddWord({ rows, actions }) {
                     <button
                       onClick={() => handleSaveRowChanges()}
                       className={style.button}
-                      //disabled={!editedRow && !isValid}
-                      disabled={!(editedRow && !isValid)}
-                      
+                      disabled={!(editedRow && isValid)}
                     >
                       Сохранить
                     </button>

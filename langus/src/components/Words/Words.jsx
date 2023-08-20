@@ -1,5 +1,5 @@
 import React from 'react'
-import '../diction.json';
+//import '../diction.json';
 import style from './style.module.scss';
 
 export default function Words(props) {

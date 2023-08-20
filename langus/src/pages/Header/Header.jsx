@@ -14,6 +14,9 @@ export default function Header() {
                   <CustomLink to="/" end><img src={require('./mylogo.svg').default} alt="Home" className={style.logo}/>Home</CustomLink>
                 </li>
                 <li>
+                  <CustomLink to="/Words2" end>Words</CustomLink>
+                </li>
+                <li>
                   <CustomLink to="/Cards" end>Cards</CustomLink>
                 </li>
                 <li>

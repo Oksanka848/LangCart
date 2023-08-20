@@ -2,6 +2,7 @@
   "name": "langus",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://itgirlschool.justmakeit.ru/",
   "homepage": "https://Oksanka848.github.io/LangCart",
   "dependencies": {
     "@babel/core": "^7.16.0",

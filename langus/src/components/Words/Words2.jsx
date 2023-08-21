@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react'
 import style from './style.module.scss';
 
 export default function Words2() {
-	let [words, setWords] = useState ([]);
+	let [words, setWords] = useState ([ ]);
   let [isLoading, setisLoading] = useState (false);
   let [error, setError] = useState (null);
 	
@@ -18,18 +18,25 @@ export default function Words2() {
             .then((response) => {setWords(response); setisLoading(false);})
             .catch((error) => {setError(error); setisLoading(false);});
     }, [ ]); 
-    
+    if (error) {
+      return <p>{error.message}</p>;
+  }
+
+  if (isLoading) {
+      return <p>Loading ...</p>;
+  }
+  
 
     return (
-			   <>
-      { isLoading ? (<div>Loading...</div>) : error ? ( <div>{error.message}</div> ) : (
+			   
                  <><div className={style.container}>
                  <div className={style.listcontainer}>
-                   {
-                     words.map((word) => 
-                       <li key={word.id}> {word.english} - {word.russian} - {word.transcription}</li>
-                    
-                     )
-                   }
+                 <ol>
+             {
+                words.map(word => {
+                    return <li key={word.id}>{word.english} - {word.russian}</li>
+                })
+             }
+	       </ol>
                  </div>
-               </div> </> ) } </>)}
+               </div> </> ) }
